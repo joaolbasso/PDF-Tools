@@ -49,9 +49,10 @@ def deletar_paginas(caminho_entrada, caminho_saida, paginas_para_deletar):
 
 # --- CONFIGURAÇÃO E EXECUÇÃO ---
 if __name__ == "__main__":
-    arquivo_origem = "ordenado_final_manha.pdf"
+    arquivo_origem = "origem.pdf"
     arquivo_destino = "bruto.pdf"
     
     paginas_alvo = [228, 230, 232] 
+
 
     deletar_paginas(arquivo_origem, arquivo_destino, paginas_alvo)
