@@ -27,9 +27,10 @@ if __name__ == "__main__":
     # Exemplo: O bolão principal + a página que você escaneou agora
     arquivos_para_juntar = [
         "ordenado_final_tarde.pdf",           # Seu arquivo original grande
-        "3 tarde.pdf"  # A página única que você escaneou agora
+        "adicional.pdf"  # A página única que você escaneou agora
     ]
     
     arquivo_final = "bruto_completo.pdf"
     
+
     juntar_pdfs(arquivos_para_juntar, arquivo_final)
