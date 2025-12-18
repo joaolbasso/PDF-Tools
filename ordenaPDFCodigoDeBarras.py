@@ -1,24 +1,17 @@
 import os
-from collections import defaultdict # <--- Mudança aqui para agrupar páginas
+from collections import defaultdict
 from pypdf import PdfReader, PdfWriter
 from pdf2image import convert_from_path, pdfinfo_from_path
 from pyzbar.pyzbar import decode, ZBarSymbol
 
-# --- CONFIGURAÇÃO ---
 POPPLER_PATH = r"C:/Release-25.12.0-0/poppler-25.12.0/Library/bin"
 
-# Configurações de Leitura
 DPI_LEITURA = 150  
 ALTURA_CORTE_CM = 7.0 
 
 def gerar_relatorio_auditoria(lista_paginas, caminho_log):
-    """
-    Gera relatório detalhado com posições originais das ocorrências.
-    """
     print(f"Gerando relatório de auditoria em: {caminho_log}")
     
-    # Dicionário para mapear: Turma -> Lista de Páginas Originais
-    # Ex: { 5: [10, 45], 12: [3] }
     mapa_ocorrencias = defaultdict(list)
     paginas_erro = []
     
@@ -175,4 +168,5 @@ def ordenar_pdf_otimizado(caminho_pdf_entrada, caminho_pdf_saida):
 if __name__ == "__main__":
     entrada = "bruto.pdf" 
     saida = "ordenado_final.pdf"
+
     ordenar_pdf_otimizado(entrada, saida)
